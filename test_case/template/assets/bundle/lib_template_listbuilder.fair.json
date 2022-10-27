@@ -1,0 +1,30 @@
+{
+  "className": "Container",
+  "na": {
+    "child": {
+      "className": "Sugar.listBuilder",
+      "na": {
+        "itemCount": "%(_getItemCount)",
+        "itemBuilder": {
+          "className": "Card",
+          "na": {
+            "child": {
+              "className": "Container",
+              "na": {
+                "height": 80,
+                "alignment": "#(Alignment.center)",
+                "child": {
+                  "className": "Text",
+                  "pa": [
+                    "#($item)"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "methodMap": {}
+}

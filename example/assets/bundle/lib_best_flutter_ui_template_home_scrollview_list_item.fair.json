@@ -17,20 +17,12 @@
           ]
         },
         "child": {
-          "className": "Stack",
+          "className": "Image.network",
+          "pa": [
+            "%(getImagePath)"
+          ],
           "na": {
-            "alignment": "#(AlignmentDirectional.center)",
-            "children": [
-              {
-                "className": "Image.asset",
-                "pa": [
-                  "#(imagePath)"
-                ],
-                "na": {
-                  "fit": "#(BoxFit.cover)"
-                }
-              }
-            ]
+            "fit": "#(BoxFit.cover)"
           }
         }
       }

@@ -11,9 +11,8 @@
       }
     },
     "child": {
-      "className": "InkWell",
+      "className": "GestureDetector",
       "na": {
-        "splashColor": "#(Colors.transparent)",
         "child": {
           "className": "Container",
           "na": {
@@ -44,9 +43,9 @@
                               "na": {
                                 "aspectRatio": 2,
                                 "child": {
-                                  "className": "Image.asset",
+                                  "className": "Image.network",
                                   "pa": [
-                                    "#(hotelData.imagePath)"
+                                    "%(getImagePath)"
                                   ],
                                   "na": {
                                     "fit": "#(BoxFit.cover)"
@@ -57,7 +56,12 @@
                             {
                               "className": "Container",
                               "na": {
-                                "color": "#(backgroundColor)",
+                                "color": {
+                                  "className": "Color",
+                                  "pa": [
+                                    "0xFFFFFFFF"
+                                  ]
+                                },
                                 "child": {
                                   "className": "Row",
                                   "na": {
@@ -90,7 +94,7 @@
                                                         {
                                                           "className": "Text",
                                                           "pa": [
-                                                            "#(hotelData.titleTxt)"
+                                                            "%(getTitleTxt)"
                                                           ],
                                                           "na": {
                                                             "textAlign": "#(TextAlign.left)",
@@ -112,14 +116,14 @@
                                                               {
                                                                 "className": "Text",
                                                                 "pa": [
-                                                                  "#(hotelData.subTxt)"
+                                                                  "%(getSubTxt)"
                                                                 ],
                                                                 "na": {
                                                                   "style": {
                                                                     "className": "TextStyle",
                                                                     "na": {
                                                                       "fontSize": 14,
-                                                                      "color": "#(AppTheme.greyWithOpacity)"
+                                                                      "color": "#(Colors.grey)"
                                                                     }
                                                                   }
                                                                 }
@@ -133,11 +137,16 @@
                                                               {
                                                                 "className": "Icon",
                                                                 "pa": [
-                                                                  "#(FontAwesomeIcons.mapMarkerAlt)"
+                                                                  "#(Icons.location_on_rounded)"
                                                                 ],
                                                                 "na": {
                                                                   "size": 12,
-                                                                  "color": "#(primaryColor)"
+                                                                  "color": {
+                                                                    "className": "Color",
+                                                                    "pa": [
+                                                                      "0xFF54D3C2"
+                                                                    ]
+                                                                  }
                                                                 }
                                                               },
                                                               {
@@ -146,9 +155,7 @@
                                                                   "child": {
                                                                     "className": "Text",
                                                                     "pa": [
-                                                                      {
-                                                                        "className": "distance"
-                                                                      }
+                                                                      "%(getDistance)"
                                                                     ],
                                                                     "na": {
                                                                       "overflow": "#(TextOverflow.ellipsis)",
@@ -156,7 +163,7 @@
                                                                         "className": "TextStyle",
                                                                         "na": {
                                                                           "fontSize": 14,
-                                                                          "color": "#(AppTheme.greyWithOpacity)"
+                                                                          "color": "#(Colors.grey)"
                                                                         }
                                                                       }
                                                                     }
@@ -180,29 +187,16 @@
                                                               "na": {
                                                                 "children": [
                                                                   {
-                                                                    "className": "SmoothStarRating",
-                                                                    "na": {
-                                                                      "allowHalfRating": true,
-                                                                      "starCount": 5,
-                                                                      "rating": "#(hotelData.rating)",
-                                                                      "size": 20,
-                                                                      "color": "#(primaryColor)",
-                                                                      "borderColor": "#(primaryColor)"
-                                                                    }
-                                                                  },
-                                                                  {
                                                                     "className": "Text",
                                                                     "pa": [
-                                                                      {
-                                                                        "className": "reviews"
-                                                                      }
+                                                                      "%(getReviews)"
                                                                     ],
                                                                     "na": {
                                                                       "style": {
                                                                         "className": "TextStyle",
                                                                         "na": {
                                                                           "fontSize": 14,
-                                                                          "color": "#(AppTheme.greyWithOpacity)"
+                                                                          "color": "#(Colors.grey)"
                                                                         }
                                                                       }
                                                                     }
@@ -240,9 +234,7 @@
                                                 {
                                                   "className": "Text",
                                                   "pa": [
-                                                    {
-                                                      "className": "perNight"
-                                                    }
+                                                    "%(getPerNight)"
                                                   ],
                                                   "na": {
                                                     "textAlign": "#(TextAlign.left)",
@@ -265,7 +257,7 @@
                                                       "className": "TextStyle",
                                                       "na": {
                                                         "fontSize": 14,
-                                                        "color": "#(AppTheme.greyWithOpacity)"
+                                                        "color": "#(Colors.grey)"
                                                       }
                                                     }
                                                   }
@@ -291,21 +283,9 @@
                           "child": {
                             "className": "Material",
                             "na": {
-                              "color": "#(Colors.transparent)",
                               "child": {
-                                "className": "InkWell",
+                                "className": "GestureDetector",
                                 "na": {
-                                  "borderRadius": {
-                                    "className": "BorderRadius.all",
-                                    "pa": [
-                                      {
-                                        "className": "Radius.circular",
-                                        "pa": [
-                                          32.0
-                                        ]
-                                      }
-                                    ]
-                                  },
                                   "child": {
                                     "className": "Padding",
                                     "na": {
@@ -321,13 +301,19 @@
                                           "#(Icons.favorite_border)"
                                         ],
                                         "na": {
-                                          "color": "#(primaryColor)"
+                                          "color": {
+                                            "className": "Color",
+                                            "pa": [
+                                              "0xFF54D3C2"
+                                            ]
+                                          }
                                         }
                                       }
                                     }
                                   }
                                 }
-                              }
+                              },
+                              "color": "#(Colors.transparent)"
                             }
                           }
                         }
@@ -341,5 +327,6 @@
         }
       }
     }
-  }
+  },
+  "methodMap": {}
 }

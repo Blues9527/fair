@@ -1,48 +1,68 @@
 import 'package:example/best_flutter_ui/app_theme.dart';
-import 'package:example/best_flutter_ui/hotel_booking/hotel_app_theme.dart';
-import 'package:example/best_flutter_ui/hotel_booking/model/hotel_list_data.dart';
 import 'package:fair/fair.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:smooth_star_rating_nsafe/smooth_star_rating.dart';
 
 @FairPatch()
-class HotelListViewContent extends StatelessWidget {
-  final VoidCallback callback;
-  @FairWell('hotelData')
-  final HotelListData hotelData;
-  @FairWell('primaryColor')
-  final Color primaryColor = HotelAppTheme.buildLightTheme().primaryColor;
-  @FairWell('backgroundColor')
-  final Color backgroundColor = HotelAppTheme.buildLightTheme().backgroundColor;
+class HotelListViewContent extends StatefulWidget {
+  dynamic fairProps;
 
-  @FairWell('onItemTap')
-  void onItemTap() => {callback()};
+  HotelListViewContent({Key? key, required this.fairProps}) : super(key: key);
 
-  String perNight() => '${hotelData.perNight}';
+  @override
+  State<StatefulWidget> createState() => _HotelListViewContentState();
+}
 
-  String reviews() => '${hotelData.reviews} Reviews';
+class _HotelListViewContentState extends State<HotelListViewContent> {
+  @FairProps()
+  var fairProps;
 
-  String distance() => '${hotelData.dist.toStringAsFixed(1)} km to city';
+  @override
+  void initState() {
+    super.initState();
+    fairProps = widget.fairProps;
+  }
 
-  HotelListViewContent({Key? key,required this.callback,required this.hotelData})
-      : super(key: key);
+  String getImagePath() {
+    return fairProps['imagePath'];
+  }
+
+  String getTitleTxt() {
+    return fairProps['titleTxt'];
+  }
+
+  String getSubTxt() {
+    return fairProps['subTxt'];
+  }
+
+  String getDistance() {
+    return fairProps['distance'];
+  }
+
+  double getRating() {
+    return fairProps['rating'];
+  }
+
+  String getReviews() {
+    return fairProps['reviews'];
+  }
+
+  String getPerNight() {
+    return fairProps['perNight'];
+  }
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 24, right: 24, top: 8, bottom: 16),
-      child: InkWell(
-        splashColor: Colors.transparent,
-        //onTap: AppTheme.onTapEmpty,//onItemTap,
+      child: GestureDetector(
         child: Container(
           decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(Radius.circular(16.0)),
             boxShadow: <BoxShadow>[
               BoxShadow(
-                color:
-                    AppTheme.greyWithOpacity /*Colors.grey.withOpacity(0.6)*/,
+                color: AppTheme.greyWithOpacity,
                 offset: const Offset(4, 4),
                 blurRadius: 16,
               ),
@@ -56,11 +76,10 @@ class HotelListViewContent extends StatelessWidget {
                   children: <Widget>[
                     AspectRatio(
                       aspectRatio: 2,
-                      child:
-                          Image.asset(hotelData.imagePath, fit: BoxFit.cover),
+                      child: Image.asset(getImagePath(), fit: BoxFit.cover),
                     ),
                     Container(
-                      color: backgroundColor,
+                      color: Color(0xFFFFFFFF),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,7 +94,7 @@ class HotelListViewContent extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Text(
-                                      hotelData.titleTxt,
+                                      getTitleTxt(),
                                       textAlign: TextAlign.left,
                                       style: TextStyle(
                                         fontWeight: FontWeight.w600,
@@ -89,11 +108,10 @@ class HotelListViewContent extends StatelessWidget {
                                           MainAxisAlignment.start,
                                       children: <Widget>[
                                         Text(
-                                          hotelData.subTxt,
+                                          getSubTxt(),
                                           style: TextStyle(
                                               fontSize: 14,
-                                              color: AppTheme.greyWithOpacity
-                                              /*Colors.grey.withOpacity(0.8)*/),
+                                              color: AppTheme.greyWithOpacity),
                                         ),
                                         const SizedBox(
                                           width: 4,
@@ -101,18 +119,16 @@ class HotelListViewContent extends StatelessWidget {
                                         Icon(
                                           FontAwesomeIcons.mapMarkerAlt,
                                           size: 12,
-                                          color: primaryColor,
+                                          color: Color(0xFF54D3C2),
                                         ),
                                         Expanded(
                                           child: Text(
-                                            distance(),
+                                            getDistance(),
                                             overflow: TextOverflow.ellipsis,
                                             style: TextStyle(
                                                 fontSize: 14,
-                                                color: AppTheme
-                                                    .greyWithOpacity /*Colors.grey
-                                                    .withOpacity(0.8)*/
-                                                ),
+                                                color:
+                                                    AppTheme.greyWithOpacity),
                                           ),
                                         ),
                                       ],
@@ -124,19 +140,17 @@ class HotelListViewContent extends StatelessWidget {
                                           SmoothStarRating(
                                             allowHalfRating: true,
                                             starCount: 5,
-                                            rating: hotelData.rating,
+                                            rating: getRating(),
                                             size: 20,
-                                            color: primaryColor,
-                                            borderColor: primaryColor,
+                                            color: Color(0xFF54D3C2),
+                                            borderColor: Color(0xFF54D3C2),
                                           ),
                                           Text(
-                                            reviews(),
+                                            getReviews(),
                                             style: TextStyle(
                                                 fontSize: 14,
-                                                color: AppTheme
-                                                    .greyWithOpacity /*Colors.grey
-                                                    .withOpacity(0.8)*/
-                                                ),
+                                                color:
+                                                    AppTheme.greyWithOpacity),
                                           ),
                                         ],
                                       ),
@@ -153,7 +167,7 @@ class HotelListViewContent extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: <Widget>[
                                 Text(
-                                  perNight(),
+                                  getPerNight(),
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w600,
@@ -165,7 +179,7 @@ class HotelListViewContent extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: 14,
                                       color: AppTheme
-                                          .greyWithOpacity /*Colors.grey.withOpacity(0.8)*/),
+                                          .greyWithOpacity),
                                 ),
                               ],
                             ),
@@ -180,16 +194,16 @@ class HotelListViewContent extends StatelessWidget {
                   right: 8,
                   child: Material(
                     color: Colors.transparent,
-                    child: InkWell(
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(32.0),
-                      ),
+                    child: GestureDetector(
+                      // borderRadius: const BorderRadius.all(
+                      //   Radius.circular(32.0),
+                      // ),
                       //onTap: AppTheme.onTapEmpty,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Icon(
                           Icons.favorite_border,
-                          color: primaryColor,
+                          color: Color(0xFF54D3C2),
                         ),
                       ),
                     ),

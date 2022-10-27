@@ -1,17 +1,23 @@
 import 'dart:math';
 
+import 'package:example/best_flutter_ui/template/listview_common_delegate.dart';
+import 'package:example/best_flutter_ui/template/test_data.dart';
 import 'package:fair/fair.dart';
 import 'package:flutter/material.dart';
 import 'package:example/fair_widget/delegate/test_fair_delegate.dart';
 import 'package:example/fair_widget/plugin/fair_basic_plugin.dart';
 import 'package:example/home_page.dart';
 import 'package:flutter/services.dart';
+import 'best_flutter_ui/template/gridview_delegate.dart';
+import 'best_flutter_ui/template/home_scrollview_delegate.dart';
+import 'best_flutter_ui/template/hotel_listview_delegate.dart';
+import 'best_flutter_ui/template/pageview_delegate.dart';
 import 'src/generated.fair.dart' as g;
 
 @FairBinding(packages: [
   'package:example/fair_widget/fairbinding/fair_binding_widget.dart',
 ])
-void main() async{
+void main() async {
   // runApp(MyApp());
 
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,17 +26,32 @@ void main() async{
     DeviceOrientation.portraitDown
   ]);
 
-
   FairApp.runApplication(
     FairApp(
       child: MyApp(),
       delegate: {
         ///此处delegate注册的key名必须与fairwidget页面name的名字一致,
         ///TestFairDelegate只作用于相同名字的fairwidget
-        'assets/fair/lib_fair_widget_fair_delegate_widget.fair.json': (ctx, _) => TestFairDelegate(),
+        'assets/fair/lib_fair_widget_fair_delegate_widget.fair.json':
+            (ctx, _) => TestFairDelegate(),
+        'assets/bundle/lib_best_flutter_ui_template_hotel_listview.fair.json':
+            (ctx, _) => ListviewCommonDelegate(
+                path:
+                    'assets/bundle/lib_best_flutter_ui_template_hotel_listview_item.fair.json',
+                fairProps: hotelListData),
+        'assets/bundle/lib_best_flutter_ui_template_home_scrollview.fair.json':
+            (ctx, _) => HomeScrollviewDelegate(),
+        'assets/bundle/lib_best_flutter_ui_template_gridview_template.fair.json':
+            (ctx, _) => ListviewCommonDelegate(
+                path:
+                'assets/bundle/lib_best_flutter_ui_template_gridview_template.fair.json',
+                fairProps: homeDataGrid),
+        'assets/bundle/lib_best_flutter_ui_template_pageview_template.fair.json':
+            (ctx, _) => PageViewDelegate(),
       },
       generated: g.AppGeneratedModule(),
     ),
+
     ///需要在此注册需要全局使用的plugin,key名可以随意不做要求
     plugins: {
       "FairBasicPlugin": FairBasicPlugin(),
@@ -40,7 +61,9 @@ void main() async{
 
 /// 获取路由传递的参数
 dynamic _getParams(BuildContext context, String key) =>
-    (ModalRoute.of(context)?.settings.arguments is Map) ? (ModalRoute.of(context)?.settings.arguments as Map)[key] : null;
+    (ModalRoute.of(context)?.settings.arguments is Map)
+        ? (ModalRoute.of(context)?.settings.arguments as Map)[key]
+        : null;
 
 class MyApp extends StatelessWidget {
   @override
@@ -69,8 +92,7 @@ class MyApp extends StatelessWidget {
         //     'fairProps':jsonEncode({'title':'你好'})
         //   },
         // )
-        home: HomePage()
-    );
+        home: HomePage());
   }
 }
 
@@ -90,7 +112,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   /// 定义与 JS 侧交互的参数，只支持 Map 类型的数据
   ///
   /// 需要用 @FairProps() 注解标记
@@ -103,6 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
+
     /// 需要将 widget.fairProps 赋值给 fairProps
     fairProps = widget.fairProps;
   }
@@ -134,7 +156,8 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               // 暂不支持 style: Theme.of(context).textTheme.headline4,
               // 可替换成:
-              style: TextStyle(fontSize: 40, color: Color(0xffeb4237), wordSpacing: 0),
+              style: TextStyle(
+                  fontSize: 40, color: Color(0xffeb4237), wordSpacing: 0),
             ),
           ],
         ),
@@ -149,5 +172,6 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 Color randomColor() {
-  return Color.fromARGB(255, Random().nextInt(256), Random().nextInt(256), Random().nextInt(256));
+  return Color.fromARGB(
+      255, Random().nextInt(256), Random().nextInt(256), Random().nextInt(256));
 }

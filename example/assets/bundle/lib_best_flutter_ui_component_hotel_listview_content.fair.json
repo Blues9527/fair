@@ -11,9 +11,8 @@
       }
     },
     "child": {
-      "className": "InkWell",
+      "className": "GestureDetector",
       "na": {
-        "splashColor": "#(Colors.transparent)",
         "child": {
           "className": "Container",
           "na": {
@@ -46,7 +45,7 @@
                                 "child": {
                                   "className": "Image.asset",
                                   "pa": [
-                                    "#(hotelData.imagePath)"
+                                    "%(getImagePath)"
                                   ],
                                   "na": {
                                     "fit": "#(BoxFit.cover)"
@@ -57,7 +56,12 @@
                             {
                               "className": "Container",
                               "na": {
-                                "color": "#(backgroundColor)",
+                                "color": {
+                                  "className": "Color",
+                                  "pa": [
+                                    "0xFFFFFFFF"
+                                  ]
+                                },
                                 "child": {
                                   "className": "Row",
                                   "na": {
@@ -90,7 +94,7 @@
                                                         {
                                                           "className": "Text",
                                                           "pa": [
-                                                            "#(hotelData.titleTxt)"
+                                                            "%(getTitleTxt)"
                                                           ],
                                                           "na": {
                                                             "textAlign": "#(TextAlign.left)",
@@ -112,7 +116,7 @@
                                                               {
                                                                 "className": "Text",
                                                                 "pa": [
-                                                                  "#(hotelData.subTxt)"
+                                                                  "%(getSubTxt)"
                                                                 ],
                                                                 "na": {
                                                                   "style": {
@@ -137,7 +141,12 @@
                                                                 ],
                                                                 "na": {
                                                                   "size": 12,
-                                                                  "color": "#(primaryColor)"
+                                                                  "color": {
+                                                                    "className": "Color",
+                                                                    "pa": [
+                                                                      "0xFF54D3C2"
+                                                                    ]
+                                                                  }
                                                                 }
                                                               },
                                                               {
@@ -146,9 +155,7 @@
                                                                   "child": {
                                                                     "className": "Text",
                                                                     "pa": [
-                                                                      {
-                                                                        "className": "distance"
-                                                                      }
+                                                                      "%(getDistance)"
                                                                     ],
                                                                     "na": {
                                                                       "overflow": "#(TextOverflow.ellipsis)",
@@ -184,18 +191,26 @@
                                                                     "na": {
                                                                       "allowHalfRating": true,
                                                                       "starCount": 5,
-                                                                      "rating": "#(hotelData.rating)",
+                                                                      "rating": "%(getRating)",
                                                                       "size": 20,
-                                                                      "color": "#(primaryColor)",
-                                                                      "borderColor": "#(primaryColor)"
+                                                                      "color": {
+                                                                        "className": "Color",
+                                                                        "pa": [
+                                                                          "0xFF54D3C2"
+                                                                        ]
+                                                                      },
+                                                                      "borderColor": {
+                                                                        "className": "Color",
+                                                                        "pa": [
+                                                                          "0xFF54D3C2"
+                                                                        ]
+                                                                      }
                                                                     }
                                                                   },
                                                                   {
                                                                     "className": "Text",
                                                                     "pa": [
-                                                                      {
-                                                                        "className": "reviews"
-                                                                      }
+                                                                      "%(getReviews)"
                                                                     ],
                                                                     "na": {
                                                                       "style": {
@@ -240,9 +255,7 @@
                                                 {
                                                   "className": "Text",
                                                   "pa": [
-                                                    {
-                                                      "className": "perNight"
-                                                    }
+                                                    "%(getPerNight)"
                                                   ],
                                                   "na": {
                                                     "textAlign": "#(TextAlign.left)",
@@ -293,19 +306,8 @@
                             "na": {
                               "color": "#(Colors.transparent)",
                               "child": {
-                                "className": "InkWell",
+                                "className": "GestureDetector",
                                 "na": {
-                                  "borderRadius": {
-                                    "className": "BorderRadius.all",
-                                    "pa": [
-                                      {
-                                        "className": "Radius.circular",
-                                        "pa": [
-                                          32.0
-                                        ]
-                                      }
-                                    ]
-                                  },
                                   "child": {
                                     "className": "Padding",
                                     "na": {
@@ -321,7 +323,12 @@
                                           "#(Icons.favorite_border)"
                                         ],
                                         "na": {
-                                          "color": "#(primaryColor)"
+                                          "color": {
+                                            "className": "Color",
+                                            "pa": [
+                                              "0xFF54D3C2"
+                                            ]
+                                          }
                                         }
                                       }
                                     }
@@ -341,5 +348,6 @@
         }
       }
     }
-  }
+  },
+  "methodMap": {}
 }
