@@ -1,3 +1,4 @@
+import 'package:example/best_flutter_ui/template/rating_bar.dart';
 import 'package:fair/fair.dart';
 import 'package:flutter/material.dart';
 
@@ -25,6 +26,10 @@ class _HotelListViewItemState extends State<HotelListViewItem> {
 
   String subTxt() {
     return fairProps['subTxt'];
+  }
+
+  double rating() {
+    return fairProps['rating'];
   }
 
   String distance() {
@@ -109,14 +114,14 @@ class _HotelListViewItemState extends State<HotelListViewItem> {
                                     padding: const EdgeInsets.only(top: 4),
                                     child: Row(
                                       children: <Widget>[
-                                        // RatingBar(
-                                        //   allowHalfRating: true,
-                                        //   starCount: 5,
-                                        //   rating: rating(),
-                                        //   size: 20,
-                                        //   color: Color(0xFF54D3C2),
-                                        //   borderColor: Color(0xFF54D3C2),
-                                        // ),
+                                        RatingBar(
+                                          allowHalfRating: true,
+                                          starCount: 5,
+                                          rating: rating(),
+                                          size: 20,
+                                          color: Color(0xFF54D3C2),
+                                          borderColor: Color(0xFF54D3C2),
+                                        ),
                                         Text(
                                           // '80 reviews',
                                           reviews(),

@@ -184,6 +184,27 @@
                                                           "na": {
                                                             "children": [
                                                               {
+                                                                "className": "RatingBar",
+                                                                "na": {
+                                                                  "allowHalfRating": true,
+                                                                  "starCount": 5,
+                                                                  "rating": "%(rating)",
+                                                                  "size": 20,
+                                                                  "color": {
+                                                                    "className": "Color",
+                                                                    "pa": [
+                                                                      "0xFF54D3C2"
+                                                                    ]
+                                                                  },
+                                                                  "borderColor": {
+                                                                    "className": "Color",
+                                                                    "pa": [
+                                                                      "0xFF54D3C2"
+                                                                    ]
+                                                                  }
+                                                                }
+                                                              },
+                                                              {
                                                                 "className": "Text",
                                                                 "pa": [
                                                                   "%(reviews)"
