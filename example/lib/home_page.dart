@@ -1,5 +1,6 @@
 import 'package:example/best_flutter_ui/best_ui_page.dart';
 import 'package:example/best_flutter_ui/template/home_scrollview.dart';
+import 'package:example/best_flutter_ui/template/staggeredview_template_page.dart';
 import 'package:example/public_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -87,9 +88,9 @@ class HomePage extends StatelessWidget {
                     'assets/bundle/lib_best_flutter_ui_template_pageview_template.fair.json',
               );
             }),
-            addItem("fair bestUI PageView普通模版", () {
+            addItem("fair bestUI StaggeredView模版", () {
               Navigator.of(context).push(CupertinoPageRoute(builder: (_) {
-                return PageViewTemplate();
+                return StaggeredPage();
               }));
             }),
           ],

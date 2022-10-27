@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:example/best_flutter_ui/template/listview_common_delegate.dart';
+import 'package:example/best_flutter_ui/template/staggeredview_delegate.dart';
 import 'package:example/best_flutter_ui/template/test_data.dart';
 import 'package:fair/fair.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,8 @@ import 'src/generated.fair.dart' as g;
 
 @FairBinding(packages: [
   'package:example/fair_widget/fairbinding/fair_binding_widget.dart',
+  'package:flutter_staggered_grid_view/src/widgets/staggered_grid.dart',
+  'package:flutter_staggered_grid_view/src/widgets/masonry_grid_view.dart',
 ])
 void main() async {
   // runApp(MyApp());
@@ -48,6 +51,8 @@ void main() async {
                 fairProps: homeDataGrid),
         'assets/bundle/lib_best_flutter_ui_template_pageview_template.fair.json':
             (ctx, _) => PageViewDelegate(),
+        'assets/bundle/lib_best_flutter_ui_template_staggeredview_template.fair.json':
+            (ctx, _) => StaggeredViewDelegate(),
       },
       generated: g.AppGeneratedModule(),
     ),

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 @FairBinding(packages: [
-  'package:font_awesome_flutter/font_awesome_flutter.dart',
+  // 'package:font_awesome_flutter/font_awesome_flutter.dart',
   'package:smooth_star_rating_nsafe/smooth_star_rating.dart'
 ])
 class BestUiPage extends StatefulWidget {
