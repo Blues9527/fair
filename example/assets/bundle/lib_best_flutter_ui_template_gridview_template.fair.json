@@ -20,91 +20,468 @@
         "crossAxisSpacing": 10,
         "children": [
           {
-            "className": "Container",
+            "className": "AspectRatio",
             "na": {
-              "color": "#(Colors.green)",
-              "width": 100,
-              "height": 150
+              "aspectRatio": 1.5,
+              "child": {
+                "className": "ClipRRect",
+                "na": {
+                  "borderRadius": {
+                    "className": "BorderRadius.all",
+                    "pa": [
+                      {
+                        "className": "Radius.circular",
+                        "pa": [
+                          4.0
+                        ]
+                      }
+                    ]
+                  },
+                  "child": {
+                    "className": "Image.network",
+                    "pa": [
+                      "https://pic5.58cdn.com.cn/nowater/frs/n_v31ea165ec1cb846ca89a334fde9b78f2d.png"
+                    ],
+                    "na": {
+                      "fit": "#(BoxFit.cover)"
+                    }
+                  }
+                }
+              }
             }
           },
           {
-            "className": "Container",
+            "className": "AspectRatio",
             "na": {
-              "color": "#(Colors.yellow)",
-              "width": 80,
-              "height": 250
+              "aspectRatio": 1.5,
+              "child": {
+                "className": "ClipRRect",
+                "na": {
+                  "borderRadius": {
+                    "className": "BorderRadius.all",
+                    "pa": [
+                      {
+                        "className": "Radius.circular",
+                        "pa": [
+                          4.0
+                        ]
+                      }
+                    ]
+                  },
+                  "child": {
+                    "className": "Image.network",
+                    "pa": [
+                      "https://pic6.58cdn.com.cn/nowater/frs/n_v31ffd5c348ceb41f597bdc2063f4669f6.png"
+                    ],
+                    "na": {
+                      "fit": "#(BoxFit.cover)"
+                    }
+                  }
+                }
+              }
             }
           },
           {
-            "className": "Container",
+            "className": "AspectRatio",
             "na": {
-              "color": "#(Colors.blue)",
-              "width": 150,
-              "height": 100
+              "aspectRatio": 1.5,
+              "child": {
+                "className": "ClipRRect",
+                "na": {
+                  "borderRadius": {
+                    "className": "BorderRadius.all",
+                    "pa": [
+                      {
+                        "className": "Radius.circular",
+                        "pa": [
+                          4.0
+                        ]
+                      }
+                    ]
+                  },
+                  "child": {
+                    "className": "Image.network",
+                    "pa": [
+                      "https://pic1.58cdn.com.cn/nowater/frs/n_v3069ac48509cf4f728e65bdf91421967c.png"
+                    ],
+                    "na": {
+                      "fit": "#(BoxFit.cover)"
+                    }
+                  }
+                }
+              }
             }
           },
           {
-            "className": "Container",
+            "className": "AspectRatio",
             "na": {
-              "color": "#(Colors.red)",
-              "width": 50,
-              "height": 150
+              "aspectRatio": 1.5,
+              "child": {
+                "className": "ClipRRect",
+                "na": {
+                  "borderRadius": {
+                    "className": "BorderRadius.all",
+                    "pa": [
+                      {
+                        "className": "Radius.circular",
+                        "pa": [
+                          4.0
+                        ]
+                      }
+                    ]
+                  },
+                  "child": {
+                    "className": "Image.network",
+                    "pa": [
+                      "https://pic7.58cdn.com.cn/nowater/frs/n_v36d14627e7aab401fa9b4c7abfacb6dbe.png"
+                    ],
+                    "na": {
+                      "fit": "#(BoxFit.cover)"
+                    }
+                  }
+                }
+              }
             }
           },
           {
-            "className": "Container",
+            "className": "AspectRatio",
             "na": {
-              "color": "#(Colors.deepPurpleAccent)",
-              "width": 100,
-              "height": 150
+              "aspectRatio": 1.5,
+              "child": {
+                "className": "ClipRRect",
+                "na": {
+                  "borderRadius": {
+                    "className": "BorderRadius.all",
+                    "pa": [
+                      {
+                        "className": "Radius.circular",
+                        "pa": [
+                          4.0
+                        ]
+                      }
+                    ]
+                  },
+                  "child": {
+                    "className": "Image.network",
+                    "pa": [
+                      "https://pic4.58cdn.com.cn/nowater/frs/n_v371796513e3674ca3bba97c98199495d1.png"
+                    ],
+                    "na": {
+                      "fit": "#(BoxFit.cover)"
+                    }
+                  }
+                }
+              }
             }
           },
           {
-            "className": "Container",
+            "className": "AspectRatio",
             "na": {
-              "color": "#(Colors.tealAccent)",
-              "width": 50,
-              "height": 150
+              "aspectRatio": 1.5,
+              "child": {
+                "className": "ClipRRect",
+                "na": {
+                  "borderRadius": {
+                    "className": "BorderRadius.all",
+                    "pa": [
+                      {
+                        "className": "Radius.circular",
+                        "pa": [
+                          4.0
+                        ]
+                      }
+                    ]
+                  },
+                  "child": {
+                    "className": "Image.network",
+                    "pa": [
+                      "https://pic5.58cdn.com.cn/nowater/frs/n_v31ea165ec1cb846ca89a334fde9b78f2d.png"
+                    ],
+                    "na": {
+                      "fit": "#(BoxFit.cover)"
+                    }
+                  }
+                }
+              }
             }
           },
           {
-            "className": "Container",
+            "className": "AspectRatio",
             "na": {
-              "color": "#(Colors.indigo)",
-              "width": 200,
-              "height": 150
+              "aspectRatio": 1.5,
+              "child": {
+                "className": "ClipRRect",
+                "na": {
+                  "borderRadius": {
+                    "className": "BorderRadius.all",
+                    "pa": [
+                      {
+                        "className": "Radius.circular",
+                        "pa": [
+                          4.0
+                        ]
+                      }
+                    ]
+                  },
+                  "child": {
+                    "className": "Image.network",
+                    "pa": [
+                      "https://pic6.58cdn.com.cn/nowater/frs/n_v31ffd5c348ceb41f597bdc2063f4669f6.png"
+                    ],
+                    "na": {
+                      "fit": "#(BoxFit.cover)"
+                    }
+                  }
+                }
+              }
             }
           },
           {
-            "className": "Container",
+            "className": "AspectRatio",
             "na": {
-              "color": "#(Colors.black87)",
-              "width": 220,
-              "height": 100
+              "aspectRatio": 1.5,
+              "child": {
+                "className": "ClipRRect",
+                "na": {
+                  "borderRadius": {
+                    "className": "BorderRadius.all",
+                    "pa": [
+                      {
+                        "className": "Radius.circular",
+                        "pa": [
+                          4.0
+                        ]
+                      }
+                    ]
+                  },
+                  "child": {
+                    "className": "Image.network",
+                    "pa": [
+                      "https://pic1.58cdn.com.cn/nowater/frs/n_v3069ac48509cf4f728e65bdf91421967c.png"
+                    ],
+                    "na": {
+                      "fit": "#(BoxFit.cover)"
+                    }
+                  }
+                }
+              }
             }
           },
           {
-            "className": "Container",
+            "className": "AspectRatio",
             "na": {
-              "color": "#(Colors.deepOrange)",
-              "width": 70,
-              "height": 100
+              "aspectRatio": 1.5,
+              "child": {
+                "className": "ClipRRect",
+                "na": {
+                  "borderRadius": {
+                    "className": "BorderRadius.all",
+                    "pa": [
+                      {
+                        "className": "Radius.circular",
+                        "pa": [
+                          4.0
+                        ]
+                      }
+                    ]
+                  },
+                  "child": {
+                    "className": "Image.network",
+                    "pa": [
+                      "https://pic7.58cdn.com.cn/nowater/frs/n_v36d14627e7aab401fa9b4c7abfacb6dbe.png"
+                    ],
+                    "na": {
+                      "fit": "#(BoxFit.cover)"
+                    }
+                  }
+                }
+              }
             }
           },
           {
-            "className": "Container",
+            "className": "AspectRatio",
             "na": {
-              "color": "#(Colors.white30)",
-              "width": 200,
-              "height": 150
+              "aspectRatio": 1.5,
+              "child": {
+                "className": "ClipRRect",
+                "na": {
+                  "borderRadius": {
+                    "className": "BorderRadius.all",
+                    "pa": [
+                      {
+                        "className": "Radius.circular",
+                        "pa": [
+                          4.0
+                        ]
+                      }
+                    ]
+                  },
+                  "child": {
+                    "className": "Image.network",
+                    "pa": [
+                      "https://pic4.58cdn.com.cn/nowater/frs/n_v371796513e3674ca3bba97c98199495d1.png"
+                    ],
+                    "na": {
+                      "fit": "#(BoxFit.cover)"
+                    }
+                  }
+                }
+              }
             }
           },
           {
-            "className": "Container",
+            "className": "AspectRatio",
             "na": {
-              "color": "#(Colors.pink)",
-              "width": 100,
-              "height": 150
+              "aspectRatio": 1.5,
+              "child": {
+                "className": "ClipRRect",
+                "na": {
+                  "borderRadius": {
+                    "className": "BorderRadius.all",
+                    "pa": [
+                      {
+                        "className": "Radius.circular",
+                        "pa": [
+                          4.0
+                        ]
+                      }
+                    ]
+                  },
+                  "child": {
+                    "className": "Image.network",
+                    "pa": [
+                      "https://pic5.58cdn.com.cn/nowater/frs/n_v31ea165ec1cb846ca89a334fde9b78f2d.png"
+                    ],
+                    "na": {
+                      "fit": "#(BoxFit.cover)"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "className": "AspectRatio",
+            "na": {
+              "aspectRatio": 1.5,
+              "child": {
+                "className": "ClipRRect",
+                "na": {
+                  "borderRadius": {
+                    "className": "BorderRadius.all",
+                    "pa": [
+                      {
+                        "className": "Radius.circular",
+                        "pa": [
+                          4.0
+                        ]
+                      }
+                    ]
+                  },
+                  "child": {
+                    "className": "Image.network",
+                    "pa": [
+                      "https://pic6.58cdn.com.cn/nowater/frs/n_v31ffd5c348ceb41f597bdc2063f4669f6.png"
+                    ],
+                    "na": {
+                      "fit": "#(BoxFit.cover)"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "className": "AspectRatio",
+            "na": {
+              "aspectRatio": 1.5,
+              "child": {
+                "className": "ClipRRect",
+                "na": {
+                  "borderRadius": {
+                    "className": "BorderRadius.all",
+                    "pa": [
+                      {
+                        "className": "Radius.circular",
+                        "pa": [
+                          4.0
+                        ]
+                      }
+                    ]
+                  },
+                  "child": {
+                    "className": "Image.network",
+                    "pa": [
+                      "https://pic1.58cdn.com.cn/nowater/frs/n_v3069ac48509cf4f728e65bdf91421967c.png"
+                    ],
+                    "na": {
+                      "fit": "#(BoxFit.cover)"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "className": "AspectRatio",
+            "na": {
+              "aspectRatio": 1.5,
+              "child": {
+                "className": "ClipRRect",
+                "na": {
+                  "borderRadius": {
+                    "className": "BorderRadius.all",
+                    "pa": [
+                      {
+                        "className": "Radius.circular",
+                        "pa": [
+                          4.0
+                        ]
+                      }
+                    ]
+                  },
+                  "child": {
+                    "className": "Image.network",
+                    "pa": [
+                      "https://pic7.58cdn.com.cn/nowater/frs/n_v36d14627e7aab401fa9b4c7abfacb6dbe.png"
+                    ],
+                    "na": {
+                      "fit": "#(BoxFit.cover)"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "className": "AspectRatio",
+            "na": {
+              "aspectRatio": 1.5,
+              "child": {
+                "className": "ClipRRect",
+                "na": {
+                  "borderRadius": {
+                    "className": "BorderRadius.all",
+                    "pa": [
+                      {
+                        "className": "Radius.circular",
+                        "pa": [
+                          4.0
+                        ]
+                      }
+                    ]
+                  },
+                  "child": {
+                    "className": "Image.network",
+                    "pa": [
+                      "https://pic4.58cdn.com.cn/nowater/frs/n_v371796513e3674ca3bba97c98199495d1.png"
+                    ],
+                    "na": {
+                      "fit": "#(BoxFit.cover)"
+                    }
+                  }
+                }
+              }
             }
           }
         ]

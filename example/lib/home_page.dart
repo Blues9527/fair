@@ -76,11 +76,11 @@ class HomePage extends StatelessWidget {
                     'assets/bundle/lib_best_flutter_ui_template_gridview_template.fair.json',
               );
             }),
-            addItem("fair bestUI GridView普通模版", () {
-              Navigator.of(context).push(CupertinoPageRoute(builder: (_) {
-                return GridViewTemplate();
-              }));
-            }),
+            // addItem("fair bestUI GridView普通模版", () {
+            //   Navigator.of(context).push(CupertinoPageRoute(builder: (_) {
+            //     return GridViewTemplate();
+            //   }));
+            // }),
             addItem("fair bestUI PageView模版", () {
               showWidget(
                 fairArguments: {"fairText": '路由是个好东西，要进一步封装'},

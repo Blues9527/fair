@@ -19,60 +19,140 @@ class _GridViewTemplateState extends State<GridViewTemplate> {
           mainAxisSpacing: 10,
           crossAxisSpacing: 10,
           children: [
-            Container(
-              color: Colors.green,
-              width: 100,
-              height: 150,
+            AspectRatio(
+              aspectRatio: 1.5,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+                child: Image.network(
+                    'https://pic5.58cdn.com.cn/nowater/frs/n_v31ea165ec1cb846ca89a334fde9b78f2d.png',
+                    fit: BoxFit.cover),
+              ),
             ),
-            Container(
-              color: Colors.yellow,
-              width: 80,
-              height: 250,
+            AspectRatio(
+              aspectRatio: 1.5,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+                child: Image.network(
+                    'https://pic6.58cdn.com.cn/nowater/frs/n_v31ffd5c348ceb41f597bdc2063f4669f6.png',
+                    fit: BoxFit.cover),
+              ),
             ),
-            Container(
-              color: Colors.blue,
-              width: 150,
-              height: 100,
+            AspectRatio(
+              aspectRatio: 1.5,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+                child: Image.network(
+                    'https://pic1.58cdn.com.cn/nowater/frs/n_v3069ac48509cf4f728e65bdf91421967c.png',
+                    fit: BoxFit.cover),
+              ),
             ),
-            Container(
-              color: Colors.red,
-              width: 50,
-              height: 150,
+            AspectRatio(
+              aspectRatio: 1.5,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+                child: Image.network(
+                    'https://pic7.58cdn.com.cn/nowater/frs/n_v36d14627e7aab401fa9b4c7abfacb6dbe.png',
+                    fit: BoxFit.cover),
+              ),
             ),
-            Container(
-              color: Colors.deepPurpleAccent,
-              width: 100,
-              height: 150,
+            AspectRatio(
+              aspectRatio: 1.5,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+                child: Image.network(
+                    'https://pic4.58cdn.com.cn/nowater/frs/n_v371796513e3674ca3bba97c98199495d1.png',
+                    fit: BoxFit.cover),
+              ),
             ),
-            Container(
-              color: Colors.tealAccent,
-              width: 50,
-              height: 150,
+            AspectRatio(
+              aspectRatio: 1.5,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+                child: Image.network(
+                    'https://pic5.58cdn.com.cn/nowater/frs/n_v31ea165ec1cb846ca89a334fde9b78f2d.png',
+                    fit: BoxFit.cover),
+              ),
             ),
-            Container(
-              color: Colors.indigo,
-              width: 200,
-              height: 150,
+            AspectRatio(
+              aspectRatio: 1.5,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+                child: Image.network(
+                    'https://pic6.58cdn.com.cn/nowater/frs/n_v31ffd5c348ceb41f597bdc2063f4669f6.png',
+                    fit: BoxFit.cover),
+              ),
             ),
-            Container(
-              color: Colors.black87,
-              width: 220,
-              height: 100,
+            AspectRatio(
+              aspectRatio: 1.5,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+                child: Image.network(
+                    'https://pic1.58cdn.com.cn/nowater/frs/n_v3069ac48509cf4f728e65bdf91421967c.png',
+                    fit: BoxFit.cover),
+              ),
             ),
-            Container(
-              color: Colors.deepOrange,
-              width: 70,
-              height: 100,
+            AspectRatio(
+              aspectRatio: 1.5,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+                child: Image.network(
+                    'https://pic7.58cdn.com.cn/nowater/frs/n_v36d14627e7aab401fa9b4c7abfacb6dbe.png',
+                    fit: BoxFit.cover),
+              ),
             ),
-            Container(
-              color: Colors.white30,
-              width: 200,
-              height: 150,
+            AspectRatio(
+              aspectRatio: 1.5,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+                child: Image.network(
+                    'https://pic4.58cdn.com.cn/nowater/frs/n_v371796513e3674ca3bba97c98199495d1.png',
+                    fit: BoxFit.cover),
+              ),
             ),
-            Container(
-              color: Colors.pink,
-              width: 100,
-              height: 150,
+            AspectRatio(
+              aspectRatio: 1.5,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+                child: Image.network(
+                    'https://pic5.58cdn.com.cn/nowater/frs/n_v31ea165ec1cb846ca89a334fde9b78f2d.png',
+                    fit: BoxFit.cover),
+              ),
+            ),
+            AspectRatio(
+              aspectRatio: 1.5,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+                child: Image.network(
+                    'https://pic6.58cdn.com.cn/nowater/frs/n_v31ffd5c348ceb41f597bdc2063f4669f6.png',
+                    fit: BoxFit.cover),
+              ),
+            ),
+            AspectRatio(
+              aspectRatio: 1.5,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+                child: Image.network(
+                    'https://pic1.58cdn.com.cn/nowater/frs/n_v3069ac48509cf4f728e65bdf91421967c.png',
+                    fit: BoxFit.cover),
+              ),
+            ),
+            AspectRatio(
+              aspectRatio: 1.5,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+                child: Image.network(
+                    'https://pic7.58cdn.com.cn/nowater/frs/n_v36d14627e7aab401fa9b4c7abfacb6dbe.png',
+                    fit: BoxFit.cover),
+              ),
+            ),
+            AspectRatio(
+              aspectRatio: 1.5,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+                child: Image.network(
+                    'https://pic4.58cdn.com.cn/nowater/frs/n_v371796513e3674ca3bba97c98199495d1.png',
+                    fit: BoxFit.cover),
+              ),
             ),
           ],
         ));
