@@ -13,21 +13,111 @@
       }
     },
     "body": {
-      "className": "GridView.builder",
+      "className": "GridView.count",
       "na": {
-        "gridDelegate": {
-          "className": "Sugar.sliverGridDelegateWithFixedCrossAxisCount",
-          "na": {
-            "crossAxisCount": 2,
-            "mainAxisSpacing": 10,
-            "crossAxisSpacing": 10
+        "crossAxisCount": 2,
+        "mainAxisSpacing": 10,
+        "crossAxisSpacing": 10,
+        "children": [
+          {
+            "className": "Container",
+            "na": {
+              "color": "#(Colors.green)",
+              "width": 100,
+              "height": 150
+            }
+          },
+          {
+            "className": "Container",
+            "na": {
+              "color": "#(Colors.yellow)",
+              "width": 80,
+              "height": 250
+            }
+          },
+          {
+            "className": "Container",
+            "na": {
+              "color": "#(Colors.blue)",
+              "width": 150,
+              "height": 100
+            }
+          },
+          {
+            "className": "Container",
+            "na": {
+              "color": "#(Colors.red)",
+              "width": 50,
+              "height": 150
+            }
+          },
+          {
+            "className": "Container",
+            "na": {
+              "color": "#(Colors.deepPurpleAccent)",
+              "width": 100,
+              "height": 150
+            }
+          },
+          {
+            "className": "Container",
+            "na": {
+              "color": "#(Colors.tealAccent)",
+              "width": 50,
+              "height": 150
+            }
+          },
+          {
+            "className": "Container",
+            "na": {
+              "color": "#(Colors.indigo)",
+              "width": 200,
+              "height": 150
+            }
+          },
+          {
+            "className": "Container",
+            "na": {
+              "color": "#(Colors.black87)",
+              "width": 220,
+              "height": 100
+            }
+          },
+          {
+            "className": "Container",
+            "na": {
+              "color": "#(Colors.deepOrange)",
+              "width": 70,
+              "height": 100
+            }
+          },
+          {
+            "className": "Container",
+            "na": {
+              "color": "#(Colors.white30)",
+              "width": 200,
+              "height": 150
+            }
+          },
+          {
+            "className": "Container",
+            "na": {
+              "color": "#(Colors.pink)",
+              "width": 100,
+              "height": 150
+            }
           }
-        },
-        "itemBuilder": "@(_itemBuilder)"
+        ]
       }
     }
   },
   "methodMap": {
+    "_gridDelegate": {
+      "className": "SliverGridDelegateWithFixedCrossAxisCount",
+      "na": {
+        "crossAxisCount": 2
+      }
+    },
     "_itemBuilder": {
       "className": "Container",
       "na": {

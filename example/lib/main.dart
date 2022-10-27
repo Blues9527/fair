@@ -45,10 +45,7 @@ void main() async {
         'assets/bundle/lib_best_flutter_ui_template_home_scrollview.fair.json':
             (ctx, _) => HomeScrollviewDelegate(),
         'assets/bundle/lib_best_flutter_ui_template_gridview_template.fair.json':
-            (ctx, _) => ListviewCommonDelegate(
-                path:
-                'assets/bundle/lib_best_flutter_ui_template_gridview_template.fair.json',
-                fairProps: homeDataGrid),
+            (ctx, _) => GridviewDelegate(),
         'assets/bundle/lib_best_flutter_ui_template_pageview_template.fair.json':
             (ctx, _) => PageViewDelegate(),
         'assets/bundle/lib_best_flutter_ui_template_staggeredview_template.fair.json':
