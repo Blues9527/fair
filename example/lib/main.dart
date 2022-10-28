@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:example/best_flutter_ui/template/listview_common_delegate.dart';
-import 'package:example/best_flutter_ui/template/staggeredview_delegate.dart';
 import 'package:example/best_flutter_ui/template/test_data.dart';
 import 'package:fair/fair.dart';
 import 'package:flutter/material.dart';
@@ -11,8 +10,6 @@ import 'package:example/home_page.dart';
 import 'package:flutter/services.dart';
 import 'best_flutter_ui/template/gridview_delegate.dart';
 import 'best_flutter_ui/template/home_scrollview_delegate.dart';
-import 'best_flutter_ui/template/hotel_listview_delegate.dart';
-import 'best_flutter_ui/template/pageview_delegate.dart';
 import 'src/generated.fair.dart' as g;
 
 @FairBinding(packages: [
@@ -41,15 +38,41 @@ void main() async {
             (ctx, _) => ListviewCommonDelegate(
                 path:
                     'assets/bundle/lib_best_flutter_ui_template_hotel_listview_item.fair.json',
-                fairProps: hotelListData),
+                dataSource: (index) => hotelListData[index]),
         'assets/bundle/lib_best_flutter_ui_template_home_scrollview.fair.json':
             (ctx, _) => HomeScrollviewDelegate(),
         'assets/bundle/lib_best_flutter_ui_template_gridview_template.fair.json':
             (ctx, _) => GridviewDelegate(),
         'assets/bundle/lib_best_flutter_ui_template_pageview_template.fair.json':
-            (ctx, _) => PageViewDelegate(),
+            (ctx, _) => ListviewCommonDelegate(
+                path:
+                    'assets/bundle/lib_best_flutter_ui_template_pageview_item_template.fair.json',
+                dataSource: (index) => {'imagePath': homeDataList[index]}),
         'assets/bundle/lib_best_flutter_ui_template_staggeredview_template.fair.json':
-            (ctx, _) => StaggeredViewDelegate(),
+            (ctx, _) => ListviewCommonDelegate(
+                path:
+                    'assets/bundle/lib_best_flutter_ui_template_staggeredview_template_item.fair.json',
+                dataSource: (index) {
+                  var aspectRatio = 1.5;
+
+                  switch (index % 3) {
+                    case 0:
+                      aspectRatio = 1.5;
+                      break;
+                    case 1:
+                      aspectRatio = 2;
+                      break;
+                    case 2:
+                      aspectRatio = 1;
+                      break;
+                    default:
+                      aspectRatio = 1.5;
+                  }
+                  return {
+                    'imagePath': homeDataGrid[index],
+                    'aspectRatio': aspectRatio
+                  };
+                }),
       },
       generated: g.AppGeneratedModule(),
     ),

@@ -3,11 +3,13 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fair/fair.dart';
 
+typedef DataSource = Function(int index);
+
 class ListviewCommonDelegate extends FairDelegate {
   final String path;
-  final List fairProps;
+  final DataSource dataSource;
 
-  ListviewCommonDelegate({required this.path, required this.fairProps});
+  ListviewCommonDelegate({required this.path, required this.dataSource});
 
   @override
   Map<String, Function> bindFunction() {
@@ -25,7 +27,7 @@ class ListviewCommonDelegate extends FairDelegate {
       name: path,
       path: path,
       data: {
-        'fairProps': jsonEncode(fairProps[index]),
+        'fairProps': jsonEncode(dataSource.call(index)),
       },
     );
   }

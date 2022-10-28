@@ -1,4 +1,4 @@
-import 'package:example/best_flutter_ui/template/rating_bar.dart';
+import 'rating_bar.dart';
 import 'package:fair/fair.dart';
 import 'package:flutter/material.dart';
 

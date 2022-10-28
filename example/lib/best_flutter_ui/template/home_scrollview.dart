@@ -1,9 +1,5 @@
-import 'dart:convert';
-
 import 'package:fair/fair.dart';
 import 'package:flutter/material.dart';
-
-import 'test_data.dart';
 
 @FairPatch()
 class HomeScrollView extends StatefulWidget {
@@ -26,17 +22,6 @@ class _HomeScrollViewState extends State<HomeScrollView> {
             title: Text('CustomScrollView模版'),
           ),
           SliverToBoxAdapter(
-            child: AspectRatio(
-              aspectRatio: 1.5,
-              child: ClipRRect(
-                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
-                child: Image.network(
-                    'https://pic5.58cdn.com.cn/nowater/frs/n_v31ea165ec1cb846ca89a334fde9b78f2d.png',
-                    fit: BoxFit.cover),
-              ),
-            ),
-          ),
-          SliverToBoxAdapter(
             child: Container(
               margin: EdgeInsets.symmetric(vertical: 15),
               child: Text(
@@ -45,6 +30,17 @@ class _HomeScrollViewState extends State<HomeScrollView> {
                     color: Colors.black87,
                     fontWeight: FontWeight.w600,
                     fontSize: 24),
+              ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: AspectRatio(
+              aspectRatio: 1.5,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+                child: Image.network(
+                    'https://pic5.58cdn.com.cn/nowater/frs/n_v31ea165ec1cb846ca89a334fde9b78f2d.png',
+                    fit: BoxFit.cover),
               ),
             ),
           ),
