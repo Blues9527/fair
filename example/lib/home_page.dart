@@ -1,12 +1,8 @@
 import 'package:example/best_flutter_ui/best_ui_page.dart';
 import 'package:example/best_flutter_ui/template/home_scrollview.dart';
-import 'package:example/best_flutter_ui/template/staggeredview_template_page.dart';
 import 'package:example/public_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'best_flutter_ui/template/gridview_template.dart';
-import 'best_flutter_ui/template/pageview_template.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
@@ -89,9 +85,11 @@ class HomePage extends StatelessWidget {
               );
             }),
             addItem("fair bestUI StaggeredView模版", () {
-              Navigator.of(context).push(CupertinoPageRoute(builder: (_) {
-                return StaggeredPage();
-              }));
+              showWidget(
+                fairArguments: {"fairText": '路由是个好东西，要进一步封装'},
+                fairPath:
+                'assets/bundle/lib_best_flutter_ui_template_staggeredview_template.fair.json',
+              );
             }),
           ],
         ),

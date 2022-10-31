@@ -11,12 +11,17 @@ class StaggeredItemView extends StatefulWidget {
 class _StaggeredItemViewState extends State<StaggeredItemView> {
   @override
   Widget build(BuildContext context) {
-    return MasonryGridView.count(
-      crossAxisCount: 2,
-      mainAxisSpacing: 10,
-      crossAxisSpacing: 5,
-      itemBuilder: _itemBuilder,
-      itemCount: 15,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('StaggeredView模版'),
+      ),
+      body: MasonryGridView.count(
+        crossAxisCount: 2,
+        mainAxisSpacing: 10,
+        crossAxisSpacing: 5,
+        itemBuilder: _itemBuilder,
+        itemCount: 15,
+      ),
     );
   }
 

@@ -74,3 +74,47 @@ final List<String> homeDataGrid = [
   'https://pic7.58cdn.com.cn/nowater/frs/n_v36d14627e7aab401fa9b4c7abfacb6dbe.png',
   'https://pic4.58cdn.com.cn/nowater/frs/n_v371796513e3674ca3bba97c98199495d1.png',
 ];
+
+///没有动态化item的模版
+final List<String> templateWithNoItem = [
+  'listview_template',
+  'home_scrollview',
+  'gridview_template',
+];
+
+
+///item获取数据逻辑绑定map
+final Map<String, dynamic> itemLogicMap = {
+  'hotel_listview': (index) => hotelListData[index],
+  //Function(int index)
+  'pageview_template': (index) => {'imagePath': homeDataList[index]},
+  //Function(int index)
+  'staggeredview_template': (index) {
+    var aspectRatio = 1.5;
+
+    switch (index % 3) {
+      case 0:
+        aspectRatio = 1.5;
+        break;
+      case 1:
+        aspectRatio = 2;
+        break;
+      case 2:
+        aspectRatio = 1;
+        break;
+      default:
+        aspectRatio = 1.5;
+    }
+    return {'imagePath': homeDataGrid[index], 'aspectRatio': aspectRatio};
+  },
+  //Function(int index)
+  'hotel_listview_item': hotelListData[0],
+  //Map<dynamic,dynamic>
+  'pageview_item_template': {'imagePath': homeDataList[0]},
+  //Map<dynamic,dynamic>
+  'staggeredview_template_item': {
+    'imagePath': homeDataGrid[0],
+    'aspectRatio': 1.5
+  },
+  //Map<dynamic,dynamic>
+};
