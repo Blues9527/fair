@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:example/best_flutter_ui/template/test_data.dart';
+import 'package:example/best_flutter_ui/template/fair_test_data.dart';
 import 'package:flutter/material.dart';
 
 import 'package:fair/fair.dart';

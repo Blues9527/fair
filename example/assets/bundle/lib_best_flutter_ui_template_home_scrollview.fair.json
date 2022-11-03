@@ -20,42 +20,6 @@
             "className": "SliverToBoxAdapter",
             "na": {
               "child": {
-                "className": "AspectRatio",
-                "na": {
-                  "aspectRatio": 1.5,
-                  "child": {
-                    "className": "ClipRRect",
-                    "na": {
-                      "borderRadius": {
-                        "className": "BorderRadius.all",
-                        "pa": [
-                          {
-                            "className": "Radius.circular",
-                            "pa": [
-                              4.0
-                            ]
-                          }
-                        ]
-                      },
-                      "child": {
-                        "className": "Image.network",
-                        "pa": [
-                          "https://pic5.58cdn.com.cn/nowater/frs/n_v31ea165ec1cb846ca89a334fde9b78f2d.png"
-                        ],
-                        "na": {
-                          "fit": "#(BoxFit.cover)"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          {
-            "className": "SliverToBoxAdapter",
-            "na": {
-              "child": {
                 "className": "Container",
                 "na": {
                   "margin": {
@@ -85,145 +49,38 @@
             }
           },
           {
-            "className": "SliverToBoxAdapter",
+            "className": "SliverGrid",
             "na": {
-              "child": {
-                "className": "AspectRatio",
+              "gridDelegate": {
+                "className": "Sugar.sliverGridDelegateWithFixedCrossAxisCount",
                 "na": {
-                  "aspectRatio": 1.5,
-                  "child": {
-                    "className": "ClipRRect",
-                    "na": {
-                      "borderRadius": {
-                        "className": "BorderRadius.all",
-                        "pa": [
-                          {
-                            "className": "Radius.circular",
-                            "pa": [
-                              4.0
-                            ]
-                          }
-                        ]
-                      },
-                      "child": {
-                        "className": "Image.network",
-                        "pa": [
-                          "https://pic6.58cdn.com.cn/nowater/frs/n_v31ffd5c348ceb41f597bdc2063f4669f6.png"
-                        ],
-                        "na": {
-                          "fit": "#(BoxFit.cover)"
-                        }
-                      }
-                    }
-                  }
+                  "crossAxisCount": 2,
+                  "mainAxisSpacing": 10.0,
+                  "crossAxisSpacing": 10.0,
+                  "childAspectRatio": 2.0
+                }
+              },
+              "delegate": {
+                "className": "SliverChildBuilderDelegate",
+                "pa": [
+                  "@(_itemBuilder)"
+                ],
+                "na": {
+                  "childCount": 3
                 }
               }
             }
           },
           {
-            "className": "SliverToBoxAdapter",
+            "className": "SliverList",
             "na": {
-              "child": {
-                "className": "AspectRatio",
+              "delegate": {
+                "className": "SliverChildBuilderDelegate",
+                "pa": [
+                  "@(_itemBuilder)"
+                ],
                 "na": {
-                  "aspectRatio": 1.5,
-                  "child": {
-                    "className": "ClipRRect",
-                    "na": {
-                      "borderRadius": {
-                        "className": "BorderRadius.all",
-                        "pa": [
-                          {
-                            "className": "Radius.circular",
-                            "pa": [
-                              4.0
-                            ]
-                          }
-                        ]
-                      },
-                      "child": {
-                        "className": "Image.network",
-                        "pa": [
-                          "https://pic1.58cdn.com.cn/nowater/frs/n_v3069ac48509cf4f728e65bdf91421967c.png"
-                        ],
-                        "na": {
-                          "fit": "#(BoxFit.cover)"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          {
-            "className": "SliverToBoxAdapter",
-            "na": {
-              "child": {
-                "className": "AspectRatio",
-                "na": {
-                  "aspectRatio": 1.5,
-                  "child": {
-                    "className": "ClipRRect",
-                    "na": {
-                      "borderRadius": {
-                        "className": "BorderRadius.all",
-                        "pa": [
-                          {
-                            "className": "Radius.circular",
-                            "pa": [
-                              4.0
-                            ]
-                          }
-                        ]
-                      },
-                      "child": {
-                        "className": "Image.network",
-                        "pa": [
-                          "https://pic7.58cdn.com.cn/nowater/frs/n_v36d14627e7aab401fa9b4c7abfacb6dbe.png"
-                        ],
-                        "na": {
-                          "fit": "#(BoxFit.cover)"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          {
-            "className": "SliverToBoxAdapter",
-            "na": {
-              "child": {
-                "className": "AspectRatio",
-                "na": {
-                  "aspectRatio": 1.5,
-                  "child": {
-                    "className": "ClipRRect",
-                    "na": {
-                      "borderRadius": {
-                        "className": "BorderRadius.all",
-                        "pa": [
-                          {
-                            "className": "Radius.circular",
-                            "pa": [
-                              4.0
-                            ]
-                          }
-                        ]
-                      },
-                      "child": {
-                        "className": "Image.network",
-                        "pa": [
-                          "https://pic4.58cdn.com.cn/nowater/frs/n_v371796513e3674ca3bba97c98199495d1.png"
-                        ],
-                        "na": {
-                          "fit": "#(BoxFit.cover)"
-                        }
-                      }
-                    }
-                  }
+                  "childCount": 3
                 }
               }
             }
@@ -233,8 +90,19 @@
     }
   },
   "methodMap": {
-    "_listItemBuilder": {
-      "className": "Container"
+    "_itemBuilder": {
+      "className": "Container",
+      "na": {
+        "color": "#(Colors.yellow)",
+        "child": {
+          "className": "Text",
+          "pa": [
+            "#($index)"
+          ]
+        },
+        "width": 100,
+        "height": 100
+      }
     }
   }
 }

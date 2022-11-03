@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:example/best_flutter_ui/template/listview_common_delegate.dart';
-import 'package:example/best_flutter_ui/template/test_data.dart';
+import 'package:example/best_flutter_ui/template/fair_test_data.dart';
 import 'package:fair/fair.dart';
 import 'package:flutter/material.dart';
 import 'package:example/fair_widget/delegate/test_fair_delegate.dart';
@@ -40,7 +40,10 @@ void main() async {
                     'assets/bundle/lib_best_flutter_ui_template_hotel_listview_item.fair.json',
                 dataSource: (index) => hotelListData[index]),
         'assets/bundle/lib_best_flutter_ui_template_home_scrollview.fair.json':
-            (ctx, _) => HomeScrollviewDelegate(),
+            (ctx, _) => ListviewCommonDelegate(
+                path:
+                    'assets/bundle/lib_best_flutter_ui_template_home_scrollview_list_item.fair.json',
+                dataSource: (index) => {'imagePath': homeDataList[index]}),
         'assets/bundle/lib_best_flutter_ui_template_gridview_template.fair.json':
             (ctx, _) => GridviewDelegate(),
         'assets/bundle/lib_best_flutter_ui_template_pageview_template.fair.json':

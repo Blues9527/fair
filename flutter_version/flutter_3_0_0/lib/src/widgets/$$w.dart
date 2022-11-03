@@ -17,6 +17,14 @@ const TextStyle _kTextStyle = TextStyle(
 
 const double kMiddleSpacing = 16.0;
 var p = () => {
+      'SliverChildBuilderDelegate': (props) => SliverChildBuilderDelegate(
+            props['pa'][0],
+            childCount: props['childCount'],
+            addAutomaticKeepAlives: props['addAutomaticKeepAlives'] ?? true,
+            addRepaintBoundaries: props['addRepaintBoundaries'] ?? true,
+            addSemanticIndexes: props['addSemanticIndexes'] ?? true,
+            semanticIndexOffset: props['semanticIndexOffset'] ?? 0,
+          ),
       'RenderObjectToWidgetAdapter': (props) => RenderObjectToWidgetAdapter(
             child: props['child'],
             container: props['container'],
