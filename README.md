@@ -1,7 +1,7 @@
 ![social preview](social-dark.png)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <p align="center">
-  <a href="https://pub.dev/packages/fair"><img src="https://img.shields.io/badge/pub-2.7.0-orange" alt="pub"></a>
+  <a href="https://pub.dev/packages/fair"><img src="https://img.shields.io/badge/pub-2.8.1-orange" alt="pub"></a>
   <a href="https://github.com/wuba/fair"><img src="https://img.shields.io/badge/platform-flutter-blue.svg" alt="github"></a>
   <a href="https://fair.58.com/"><img src="https://img.shields.io/badge/doc-fair.58.com-green.svg" alt="doc"></a>
   <a href="https://github.com/wuba/fair/LICENSE"><img src="https://img.shields.io/badge/license-BSD-green.svg" alt="license"></a>
@@ -13,11 +13,11 @@
 
 ---
 
-Fair is a lightweight package for Flutter, which can be used to update widget tree and state dynamically. This package is still at an early stage.
+Fair is a dynamic framework designed for Flutter. Through the automatic conversion of native Dart source files by the Fair Compiler tool, the project can obtain the ability to dynamically update the Widget Tree and State.
 
-We create Fair so we can dispatch any pages changes to users as bundle(s), the way similar to React Native. With Flutter Fair integrated, you can publish your pages without waiting for the next release date of your App. Fair provides standard widget and some logic plugins, it can be used as a new dynamic page or as part of existing Flutter page.
+The goal of creating Fair is to support updates through business bundles and JS distribution without the release of versions (Android, iOS, Web), similar to React Native. After integrating with Flutter Fair, you can quickly publish new pages without waiting for your app's next release date. Fair provides standard widgets, which can be used as a new dynamic page or as part of an existing Flutter page, such as typography/style modification of operation bits, full page replacement, partial replacement, etc.
 
-![](fair/what-is-fair-en.png)
+![](what-is-fair-en.png)
 
 Fair's UI rendering is lossless and can be restored at the pixel level. Take a look at the effect of escaping some pages of Best Flutter UI Templates:
 
@@ -50,12 +50,12 @@ Assuming that the fair project and your own project are in the same folder:
 ```yaml
 # add Fair dependency
 dependencies:
-  fair: 2.7.0
+  fair: 2.8.1
 
 # add build_runner and compiler dependency
 dev_dependencies:
   build_runner: ^2.0.0
-  fair_compiler: ^1.2.0
+  fair_compiler: ^1.4.0
  
 # switch "fair_version" according to the local Flutter SDK version
 # Flutter SDK 3.0.x(3.0.0、3.0.1、3.0.2、3.0.3、3.0.4、3.0.5) -> flutter_3_0_0
@@ -105,11 +105,68 @@ FairWidget(
   data: {"fairProps": json.encode({})}),
 ```
 
+## DevTools
+fair development tools
+### Dart Commandline Tool [faircli](https://pub.dev/packages/faircli)
+
+create fair project
+
+**faircli install**
+```dart
+dart pub global activate faircli
+```
+
+**create fair dynamic project**
+```dart
+faircli create -n dynamic_project_name
+```
+**create fair carrier project**
+```dart
+faircli create -k carrier -n carrier_project_name
+```
+
+### IDEA Plugin [FairTemplate](https://plugins.jetbrains.com/plugin/20323-fairtemplate)
+
+Page/Component Template Code
+
+<html>
+<img src="fair_template.png" width="80%">
+</html>
+
+### DevTools flow chart
+![fair tools](fair_tools.png)
+
+### DevTools demo
+After using faircli to configure the local hot update service, open the developer options on the mobile device, select the local mode, enter the ip of the development machine, then preview fair dynamic effect
+
+<html>
+<div align="center">
+<img src="fair_tools.gif" width="50%">
+</div>
+</html>
+
+For more details, please refer to [fair_tools](fair_tools.md)
+
 ## Documentation
 For more details, please refer to [https://fair.58.com](https://fair.58.com)  
-If you need the hot update platform, please follow [FAIR PUSHY](https://github.com/wuba/FairPushy)
+### Tools
+Fair Cli: [Fair_CLI](https://pub.dev/packages/faircli)  
+IEDA plugin: [jetbrains_plugin_fair_template](https://plugins.jetbrains.com/plugin/20323-fairtemplate)  
+Hot update platform: [FAIR PUSHY](https://github.com/wuba/FairPushy)
 
 ## versions
+
+### 2.8.1
+updateDate：2022.11.01
+
+- Fixed：CustomScrollView reference external function builder bug.
+
+### 2.8.0
+updateDate：2022.10.21
+
+- Add support of Flutter SDK 3.3.0+.
+- Add Sugar：Sugar.isNestedScrollViewHeaderSliversBuilder、Sugar.isButtonStyle、Sugar.isDuration、Sugar.popMenuButton、Sugar.sliverChildBuilderDelegate、Sugar.sliverGridDelegateWithFixedCrossAxisCount.
+- Fixed some bugs.
 
 ### 2.7.0
 updateDate：2022.08.10
