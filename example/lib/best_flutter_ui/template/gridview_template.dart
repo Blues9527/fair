@@ -156,26 +156,17 @@ class _GridViewTemplateState extends State<GridViewTemplate> {
             ),
           ],
         ));
+
     // return Scaffold(
     //     appBar: AppBar(
     //       title: Text('GridView模版'),
     //     ),
     //     body: GridView.builder(
-    //         gridDelegate: _gridDelegate(),
-    // Sugar.sliverGridDelegateWithFixedCrossAxisCount(
-    //     crossAxisCount: 2, mainAxisSpacing: 10, crossAxisSpacing: 10),
-    // itemBuilder: (context, index) {
-    //   return Container(
-    //     color: Colors.green,
-    //     width: 100,
-    //     height: 100,
-    //   );
-    // }
-    // itemBuilder: _itemBuilder));
-  }
-
-  SliverGridDelegate _gridDelegate() {
-    return SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2);
+    //         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+    //             crossAxisCount: 2,
+    //             mainAxisSpacing: 10,
+    //             crossAxisSpacing: 10),
+    //         itemBuilder: _itemBuilder));
   }
 
   Widget _itemBuilder(context, index) {

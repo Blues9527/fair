@@ -17,6 +17,14 @@ const TextStyle _kTextStyle = TextStyle(
 
 const double kMiddleSpacing = 16.0;
 var p = () => {
+      'SliverGridDelegateWithFixedCrossAxisCount': (props) =>
+          SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: props['crossAxisCount'] ?? 2,
+            mainAxisSpacing: props['mainAxisSpacing'] ?? 0.0,
+            crossAxisSpacing: props['crossAxisSpacing'] ?? 0.0,
+            childAspectRatio: props['childAspectRatio'] ?? 1.0,
+            mainAxisExtent: props['mainAxisExtent'],
+          ),
       'SliverChildBuilderDelegate': (props) => SliverChildBuilderDelegate(
             props['pa'][0],
             childCount: props['childCount'],

@@ -489,12 +489,6 @@
     }
   },
   "methodMap": {
-    "_gridDelegate": {
-      "className": "SliverGridDelegateWithFixedCrossAxisCount",
-      "na": {
-        "crossAxisCount": 2
-      }
-    },
     "_itemBuilder": {
       "className": "Container",
       "na": {

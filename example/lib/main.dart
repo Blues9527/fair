@@ -8,8 +8,6 @@ import 'package:example/fair_widget/delegate/test_fair_delegate.dart';
 import 'package:example/fair_widget/plugin/fair_basic_plugin.dart';
 import 'package:example/home_page.dart';
 import 'package:flutter/services.dart';
-import 'best_flutter_ui/template/gridview_delegate.dart';
-import 'best_flutter_ui/template/home_scrollview_delegate.dart';
 import 'src/generated.fair.dart' as g;
 
 @FairBinding(packages: [
@@ -45,7 +43,10 @@ void main() async {
                     'assets/bundle/lib_best_flutter_ui_template_home_scrollview_list_item.fair.json',
                 dataSource: (index) => {'imagePath': homeDataList[index]}),
         'assets/bundle/lib_best_flutter_ui_template_gridview_template.fair.json':
-            (ctx, _) => GridviewDelegate(),
+            (ctx, _) => ListviewCommonDelegate(
+                path:
+                'assets/bundle/lib_best_flutter_ui_template_gridview_item_template.fair.json',
+                dataSource: (index) => {'imagePath': homeDataGrid[index]}),
         'assets/bundle/lib_best_flutter_ui_template_pageview_template.fair.json':
             (ctx, _) => ListviewCommonDelegate(
                 path:
