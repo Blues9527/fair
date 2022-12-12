@@ -1,5 +1,6 @@
 import 'package:example/best_flutter_ui/best_ui_page.dart';
 import 'package:example/best_flutter_ui/template/home_scrollview.dart';
+import 'package:example/best_flutter_ui/template/sugar_test_case.dart';
 import 'package:example/public_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -106,6 +107,32 @@ class HomePage extends StatelessWidget {
                 fairPath:
                 'assets/bundle/lib_best_flutter_ui_template_fab.fair.json',
               );
+            }),
+            addItem("fair 登录页模版", () {
+              showWidget(
+                fairArguments: {"fairText": '路由是个好东西，要进一步封装'},
+                fairPath:
+                'assets/bundle/lib_best_flutter_ui_template_login_page_template.fair.json',
+              );
+            }),
+            addItem("fair 仿朋友圈模版", () {
+              showWidget(
+                fairArguments: {"fairText": '路由是个好东西，要进一步封装'},
+                fairPath:
+                'assets/bundle/lib_best_flutter_ui_template_moments_list.fair.json',
+              );
+            }),
+            addItem("fair 语法脱糖测试", () {
+              showWidget(
+                fairArguments: {"fairText": '路由是个好东西，要进一步封装'},
+                fairPath:
+                'assets/bundle/lib_best_flutter_ui_template_sugar_test_case.fair.json',
+              );
+            }),
+            addItem("fair 语法脱糖测试非fairpatch", () {
+              Navigator.of(context).push(CupertinoPageRoute(builder: (_) {
+                return SugarTestCase();
+              }));
             }),
           ],
         ),

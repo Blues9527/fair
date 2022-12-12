@@ -17,6 +17,32 @@ const TextStyle _kTextStyle = TextStyle(
 
 const double kMiddleSpacing = 16.0;
 var p = () => {
+      'Duration': (props) => Duration(
+            hours: props['hours'] ?? 0,
+            minutes: props['minutes'] ?? 0,
+            seconds: props['seconds'] ?? 0,
+            milliseconds: props['milliseconds'] ?? 0,
+            microseconds: props['microseconds'] ?? 0,
+          ),
+      'Radius.circular': (props) => Radius.circular(
+            props['pa'][0],
+          ),
+      'BoxConstraints': (props) => BoxConstraints(
+            minWidth: props['minWidth'] ?? 0.0,
+            maxWidth: props['maxWidth'] ?? double.infinity,
+            minHeight: props['minHeight'] ?? 0.0,
+            maxHeight: props['maxHeight'] ?? double.infinity,
+          ),
+      'UnderlineInputBorder': (props) => UnderlineInputBorder(
+            borderRadius: props['borderRadius'] ?? BorderRadius.all(Radius.circular(4.0)),
+            borderSide: props['borderSide'] ?? BorderSide(),
+      ),
+      'OutlineInputBorder': (props) => OutlineInputBorder(
+            borderSide: props['borderSide'] ?? BorderSide(),
+            borderRadius:
+                props['borderRadius'] ?? BorderRadius.all(Radius.circular(4.0)),
+            gapPadding: props['gapPadding'] ?? 4.0,
+          ),
       'SliverGridDelegateWithFixedCrossAxisCount': (props) =>
           SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: props['crossAxisCount'] ?? 2,

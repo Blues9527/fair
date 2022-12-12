@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:example/best_flutter_ui/template/listview_common_delegate.dart';
 import 'package:example/best_flutter_ui/template/fair_test_data.dart';
+import 'package:example/best_flutter_ui/template/popupmenu_delegate.dart';
 import 'package:fair/fair.dart';
 import 'package:flutter/material.dart';
 import 'package:example/fair_widget/delegate/test_fair_delegate.dart';
@@ -77,6 +78,16 @@ void main() async {
                     'aspectRatio': aspectRatio
                   };
                 }),
+        'assets/bundle/lib_best_flutter_ui_template_moments_list.fair.json':
+            (ctx, _) => ListviewCommonDelegate(
+            path:
+            'assets/bundle/lib_best_flutter_ui_template_list_card_item.fair.json',
+            dataSource: (index) => {}),
+        'assets/bundle/lib_best_flutter_ui_template_sugar_test_case.fair.json':
+            (ctx, _) => PopupMenuDelegate(
+            path:
+            'assets/bundle/lib_best_flutter_ui_template_list_card_item.fair.json',
+            dataSource: (index) => {}),
       },
       generated: g.AppGeneratedModule(),
     ),

@@ -1,0 +1,235 @@
+{
+  "className": "Scaffold",
+  "na": {
+    "appBar": {
+      "className": "AppBar",
+      "na": {
+        "title": {
+          "className": "Text",
+          "pa": [
+            "SugarTestCase"
+          ]
+        }
+      }
+    },
+    "body": {
+      "className": "CustomScrollView",
+      "na": {
+        "slivers": [
+          {
+            "className": "SliverToBoxAdapter",
+            "na": {
+              "child": {
+                "className": "Text",
+                "pa": [
+                  "Sugar.isDuration"
+                ]
+              }
+            }
+          },
+          {
+            "className": "SliverToBoxAdapter",
+            "na": {
+              "child": {
+                "className": "FadeInImage",
+                "na": {
+                  "fadeInDuration": {
+                    "className": "Sugar.isDuration",
+                    "na": {
+                      "milliseconds": 1000
+                    }
+                  },
+                  "fadeOutDuration": {
+                    "className": "Sugar.isDuration",
+                    "na": {
+                      "milliseconds": 1000
+                    }
+                  },
+                  "placeholder": {
+                    "className": "AssetImage",
+                    "pa": [
+                      "assets/images/helpImage.png"
+                    ]
+                  },
+                  "image": {
+                    "className": "NetworkImage",
+                    "pa": [
+                      "https://img2.baidu.com/it/u=4114138728,2649938841&fm=253&fmt=auto&app=138&f=JPEG"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "className": "SliverToBoxAdapter",
+            "na": {
+              "child": {
+                "className": "Text",
+                "pa": [
+                  "Sugar.popMenuButton"
+                ]
+              }
+            }
+          },
+          {
+            "className": "SliverToBoxAdapter",
+            "na": {
+              "child": {
+                "className": "PopupMenuButton",
+                "na": {
+                  "itemBuilder": "^(_popupMenuBuilder)",
+                  "onSelected": "@(_onSelect)",
+                  "initialValue": "^(initValue)",
+                  "onCanceled": "@(_onCancel)",
+                  "child": {
+                    "className": "Text",
+                    "pa": [
+                      "^(initValue)"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "className": "SliverToBoxAdapter",
+            "na": {
+              "child": {
+                "className": "Text",
+                "pa": [
+                  "Sugar.sliverChildBuilderDelegate & Sugar.sliverGridDelegateWithFixedCrossAxisCount Demo"
+                ]
+              }
+            }
+          },
+          {
+            "className": "SliverGrid",
+            "na": {
+              "gridDelegate": {
+                "className": "SliverGridDelegateWithFixedCrossAxisCount",
+                "na": {
+                  "crossAxisCount": 2,
+                  "mainAxisSpacing": 10.0,
+                  "crossAxisSpacing": 10.0,
+                  "childAspectRatio": 2.0
+                }
+              },
+              "delegate": {
+                "className": "SliverChildBuilderDelegate",
+                "pa": [
+                  "@(_itemBuilder)"
+                ],
+                "na": {
+                  "childCount": 3
+                }
+              }
+            }
+          },
+          {
+            "className": "SliverToBoxAdapter",
+            "na": {
+              "child": {
+                "className": "Text",
+                "pa": [
+                  "Sugar.netWorkImage Demo"
+                ]
+              }
+            }
+          },
+          {
+            "className": "SliverToBoxAdapter",
+            "na": {
+              "child": {
+                "className": "Card",
+                "na": {
+                  "child": {
+                    "className": "Image",
+                    "na": {
+                      "image": {
+                        "className": "NetworkImage",
+                        "pa": [
+                          "https://img2.baidu.com/it/u=4114138728,2649938841&fm=253&fmt=auto&app=138&f=JPEG"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "className": "SliverToBoxAdapter",
+            "na": {
+              "child": {
+                "className": "Text",
+                "pa": [
+                  "Sugar.boxConstraints Demo"
+                ]
+              }
+            }
+          },
+          {
+            "className": "SliverToBoxAdapter",
+            "na": {
+              "child": {
+                "className": "Container",
+                "na": {
+                  "constraints": {
+                    "className": "BoxConstraints",
+                    "na": {
+                      "minWidth": 5.0,
+                      "maxWidth": 100.0,
+                      "minHeight": 0.0,
+                      "maxHeight": 100.0
+                    }
+                  },
+                  "color": "#(Colors.pink)"
+                }
+              }
+            }
+          },
+          {
+            "className": "SliverToBoxAdapter",
+            "na": {
+              "child": {
+                "className": "Text",
+                "pa": [
+                  "Sugar.borderSide Demo"
+                ]
+              }
+            }
+          },
+          {
+            "className": "SliverToBoxAdapter",
+            "na": {
+              "child": {
+                "className": "Container",
+                "na": {
+                  "decoration": {
+                    "className": "BoxDecoration",
+                    "na": {
+                      "border": {
+                        "className": "Border",
+                        "na": {
+                          "bottom": {
+                            "className": "BorderSide",
+                            "na": {
+                              "color": "#(Colors.pink)",
+                              "width": 1.0
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "methodMap": {}
+}
