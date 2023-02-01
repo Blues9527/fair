@@ -1,0 +1,3 @@
+[submodule "FairTemplateSubmodule"]
+	path = FairTemplateSubmodule
+	url = git@github.com:Blues9527/FairTemplateSubmodule.git
