@@ -17,38 +17,6 @@
         "child": {
           "className": "Container",
           "na": {
-            "decoration": {
-              "className": "BoxDecoration",
-              "na": {
-                "borderRadius": {
-                  "className": "BorderRadius.all",
-                  "pa": [
-                    {
-                      "className": "Radius.circular",
-                      "pa": [
-                        16.0
-                      ]
-                    }
-                  ]
-                },
-                "boxShadow": [
-                  {
-                    "className": "BoxShadow",
-                    "na": {
-                      "color": "#(AppTheme.greyWithOpacity)",
-                      "offset": {
-                        "className": "Offset",
-                        "pa": [
-                          4,
-                          4
-                        ]
-                      },
-                      "blurRadius": 16
-                    }
-                  }
-                ]
-              }
-            },
             "child": {
               "className": "ClipRRect",
               "na": {

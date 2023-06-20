@@ -1,0 +1,45 @@
+{
+  "className": "Scaffold",
+  "na": {
+    "appBar": {
+      "className": "AppBar",
+      "na": {
+        "title": {
+          "className": "Text",
+          "pa": [
+            "ListView.builder模版"
+          ]
+        }
+      }
+    },
+    "backgroundColor": {
+      "className": "Color",
+      "pa": [
+        "0xFFFEFEFE"
+      ]
+    },
+    "body": {
+      "className": "Container",
+      "na": {
+        "color": {
+          "className": "Color",
+          "pa": [
+            "0xFFFFFFFF"
+          ]
+        },
+        "child": {
+          "className": "ListView.builder",
+          "na": {
+            "itemBuilder": "@(_itemBuilder)",
+            "itemCount": 5
+          }
+        }
+      }
+    }
+  },
+  "methodMap": {
+    "_itemBuilder": {
+      "className": "Container"
+    }
+  }
+}

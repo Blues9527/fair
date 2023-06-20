@@ -57,7 +57,7 @@ class _NavigationHomeScreenState extends State<NavigationHomeScreen> {
           // screenView = HelpScreen();
           screenView = FairWidget(
             name: 'help',
-            path: 'assets/bundle/lib_help_screen.fair.bin',
+            path: 'assets/bundle/lib_help_screen.fair.json',
           );
         });
       } else if (drawerIndex == DrawerIndex.FeedBack) {
@@ -65,7 +65,7 @@ class _NavigationHomeScreenState extends State<NavigationHomeScreen> {
           // screenView = FeedbackScreen();
           screenView = FairWidget(
             name: 'feedback',
-            path: 'assets/bundle/lib_feedback_screen.fair.bin',
+            path: 'assets/bundle/lib_feedback_screen.fair.json',
           );
         });
       } else if (drawerIndex == DrawerIndex.Invite) {
@@ -73,7 +73,7 @@ class _NavigationHomeScreenState extends State<NavigationHomeScreen> {
           // screenView = InviteFriend();
           screenView = FairWidget(
             name: 'invite',
-            path: 'assets/bundle/lib_invite_friend_screen.fair.bin',
+            path: 'assets/bundle/lib_invite_friend_screen.fair.json',
           );
         });
       } else {

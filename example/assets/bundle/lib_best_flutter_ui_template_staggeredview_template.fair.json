@@ -1,0 +1,15 @@
+{
+  "className": "MasonryGridView.count",
+  "na": {
+    "crossAxisCount": 2,
+    "mainAxisSpacing": 10,
+    "crossAxisSpacing": 5,
+    "itemBuilder": "@(_itemBuilder)",
+    "itemCount": 15
+  },
+  "methodMap": {
+    "_itemBuilder": {
+      "className": "Container"
+    }
+  }
+}

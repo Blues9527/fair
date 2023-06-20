@@ -122,39 +122,6 @@
                                     "na": {
                                       "width": 120,
                                       "height": 40,
-                                      "decoration": {
-                                        "className": "BoxDecoration",
-                                        "na": {
-                                          "color": "#(Colors.blue)",
-                                          "borderRadius": {
-                                            "className": "BorderRadius.all",
-                                            "pa": [
-                                              {
-                                                "className": "Radius.circular",
-                                                "pa": [
-                                                  4.0
-                                                ]
-                                              }
-                                            ]
-                                          },
-                                          "boxShadow": [
-                                            {
-                                              "className": "BoxShadow",
-                                              "na": {
-                                                "color": "#(AppTheme.greyWithOpacity)",
-                                                "offset": {
-                                                  "className": "Offset",
-                                                  "pa": [
-                                                    4,
-                                                    4
-                                                  ]
-                                                },
-                                                "blurRadius": 8.0
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      },
                                       "child": {
                                         "className": "Material",
                                         "na": {

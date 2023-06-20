@@ -375,13 +375,15 @@ var p = () => {
     'rectangle': BoxShape.rectangle,
     'circle': BoxShape.circle,
   },
-  'BorderSide': {
-    'none': BorderSide.none,
-  },
+  'BorderSide': (props) => BorderSide(
+        color: props['color'] ?? Colors.black87,
+        width: props['width'] ?? 1.0,
+        style: props['style'] ?? BorderStyle.solid,
+      ),
   'BorderSide.merge': (props) => BorderSide.merge(
-    props['pa'][0],
-    props['pa'][1],
-  ),
+        props['pa'][0],
+        props['pa'][1],
+      ),
   'BorderSide.canMerge': (props) => BorderSide.canMerge(
     props['pa'][0],
     props['pa'][1],

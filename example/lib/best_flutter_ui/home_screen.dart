@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                           transform: Matrix4.translationValues(0.0, 50 * (1.0 - animation.value), 0.0),
                                           child: FairWidget(
                                               name: 'item#$index',
-                                              path: 'assets/bundle/lib_component_home_list.fair.bin',
+                                              path: 'assets/bundle/lib_best_flutter_ui_component_home_list.fair.json',
                                               delegate: HomeListProxy(
                                                 listData: homeList[index],
                                                 callBack: () {

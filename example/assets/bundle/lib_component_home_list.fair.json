@@ -29,35 +29,12 @@
                 "na": {
                   "fit": "#(BoxFit.cover)"
                 }
-              },
-              {
-                "className": "Material",
-                "na": {
-                  "color": "#(Colors.transparent)",
-                  "child": {
-                    "className": "InkWell",
-                    "na": {
-                      "splashColor": "#(AppTheme.greyWithOpacity)",
-                      "borderRadius": {
-                        "className": "BorderRadius.all",
-                        "pa": [
-                          {
-                            "className": "Radius.circular",
-                            "pa": [
-                              4.0
-                            ]
-                          }
-                        ]
-                      },
-                      "onTap": "#(callBack)"
-                    }
-                  }
-                }
               }
             ]
           }
         }
       }
     }
-  }
+  },
+  "methodMap": {}
 }

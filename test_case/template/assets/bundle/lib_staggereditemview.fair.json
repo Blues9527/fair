@@ -1,0 +1,99 @@
+{
+  "className": "StaggeredGrid.count",
+  "na": {
+    "crossAxisCount": 4,
+    "mainAxisSpacing": 4,
+    "crossAxisSpacing": 4,
+    "children": [
+      {
+        "className": "Container",
+        "na": {
+          "color": "#(Colors.green)",
+          "width": 100,
+          "height": 150
+        }
+      },
+      {
+        "className": "Container",
+        "na": {
+          "color": "#(Colors.yellow)",
+          "width": 80,
+          "height": 250
+        }
+      },
+      {
+        "className": "Container",
+        "na": {
+          "color": "#(Colors.blue)",
+          "width": 150,
+          "height": 100
+        }
+      },
+      {
+        "className": "Container",
+        "na": {
+          "color": "#(Colors.red)",
+          "width": 50,
+          "height": 150
+        }
+      },
+      {
+        "className": "Container",
+        "na": {
+          "color": "#(Colors.deepPurpleAccent)",
+          "width": 100,
+          "height": 150
+        }
+      },
+      {
+        "className": "Container",
+        "na": {
+          "color": "#(Colors.tealAccent)",
+          "width": 50,
+          "height": 150
+        }
+      },
+      {
+        "className": "Container",
+        "na": {
+          "color": "#(Colors.indigo)",
+          "width": 200,
+          "height": 150
+        }
+      },
+      {
+        "className": "Container",
+        "na": {
+          "color": "#(Colors.black87)",
+          "width": 220,
+          "height": 100
+        }
+      },
+      {
+        "className": "Container",
+        "na": {
+          "color": "#(Colors.deepOrange)",
+          "width": 70,
+          "height": 100
+        }
+      },
+      {
+        "className": "Container",
+        "na": {
+          "color": "#(Colors.white30)",
+          "width": 200,
+          "height": 150
+        }
+      },
+      {
+        "className": "Container",
+        "na": {
+          "color": "#(Colors.pink)",
+          "width": 100,
+          "height": 150
+        }
+      }
+    ]
+  },
+  "methodMap": {}
+}

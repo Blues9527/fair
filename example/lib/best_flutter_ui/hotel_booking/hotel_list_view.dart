@@ -1,4 +1,5 @@
-import 'package:example/best_flutter_ui/src/fair/hotel_list_content_proxy.dart';
+import 'dart:convert';
+
 import 'package:fair/fair.dart';
 import 'package:flutter/material.dart';
 
@@ -33,14 +34,18 @@ class HotelListView extends StatelessWidget {
               // name should be unique
               name: 'card-${hotelData.hashCode}',
               path:
-                  'assets/bundle/lib_component_hotel_listview_content.fair.bin',
+                  'assets/bundle/lib_best_flutter_ui_component_hotel_listview_content.fair.json',
               data: {
-                'hotelData.imagePath': hotelData?.imagePath,
-                'hotelData.titleTxt': hotelData?.titleTxt,
-                'hotelData.subTxt': hotelData?.subTxt,
-                'hotelData.rating': hotelData?.rating
+                'fairProps': jsonEncode({
+                  'imagePath': hotelData?.imagePath,
+                  'titleTxt': hotelData?.titleTxt,
+                  'subTxt': hotelData?.subTxt,
+                  'rating': hotelData?.rating ?? 4.4,
+                  'perNight': '${hotelData?.perNight ?? 180}',
+                  'reviews': '${hotelData?.reviews ?? 80} Reviews',
+                  'distance': '${hotelData?.dist ?? 2.0} km to city'
+                })
               },
-              delegate: HotelListContentProxy(callback, hotelData),
             ),
           ),
         );
