@@ -151,13 +151,8 @@ class FairState extends State<FairWidget> with Loader, AutomaticKeepAliveClientM
             loadJsErrorInfo = errorResult['errorInfo'] ?? '';
             loadJsErrorLineNumber = errorResult['lineNumber'];
 
-            //debug mode use json
-            if(widget.path?.endsWith('.fair.json') == true){
-              rawJsPath = widget.path?.replaceFirst('.fair.json', '.fair.js') ??
-                  widget.path;
-
-              jsSource = await rootBundle.loadString(rawJsPath!);
-            }
+            //debug mode
+            jsSource = resolveJS;
           }
         } catch (e) {
           print(e);
